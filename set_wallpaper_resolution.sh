@@ -45,3 +45,10 @@ FULL_PATH="$WALLPAPER_DIR/$SELECTED"
 # Set the wallpaper
 echo "Setting wallpaper: $FULL_PATH"
 feh --bg-scale "$FULL_PATH"
+
+# Add this at the very end of set_wallpaper_resolution.sh
+if [[ "$1" == "--print-only" ]]; then
+    echo "$FULL_PATH"
+    exit 0
+fi
+
